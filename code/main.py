@@ -8,6 +8,10 @@ running=True
 surf=pygame.Surface((100,200))
 surf.fill("orange")
 x=100
+start_positions = [
+    (random.randint(0, Window_Width), random.randint(0, Window_Height))
+    for i in range(20)
+]
 star=pygame.image.load("images/star.png").convert_alpha()
 player=pygame.image.load("images/player.png").convert_alpha()#convert alpha like collisionshape in godot
 while running:
@@ -15,8 +19,10 @@ while running:
         if event.type==pygame.QUIT:
             running=False
     disPlay_surfec.fill("darkGray")    
+    for pos in start_positions:
+        disPlay_surfec.blit( star,pos)
     disPlay_surfec.blit(player,(x,150))  
-    disPlay_surfec.blit( star,(random.randint(0, Window_Width), random.randint(0, Window_Height)))
+    
     x+=0.3
     if x>=Window_Width:
         x=100 
