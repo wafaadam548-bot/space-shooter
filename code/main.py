@@ -19,10 +19,12 @@ player=pygame.image.load("images/player.png").convert_alpha()#convert alpha like
 player_rect=player.get_frect(center=(Window_Width/2,350))
 lasre=pygame.image.load("images/laser.png")
 laser_rect=lasre.get_frect(bottomleft=(20,Window_Height-20))
-player_direction=-1
+player_direction=pygame.math.Vector2(1,1)
 plan_rect=pygame.FRect()
 clock=pygame.time.Clock()
+player_speed=10
 while running:
+    dt=clock.tick()/1000
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             running=False
@@ -31,11 +33,14 @@ while running:
         disPlay_surfec.blit( star,pos)
     disPlay_surfec.blit( motors,motors_rect)
     disPlay_surfec.blit(lasre,laser_rect)
+    player_rect.center+=player_direction*player_speed*dt 
+    #player_rect.y-=10
     disPlay_surfec.blit(player,player_rect)  
-    
-    player_rect.x+=player_direction*0.4
-    if player_rect.right>=Window_Width or player_rect.left<0:
-        player_direction*=-1 
+   
+    if player_rect.right>Window_Width or player_rect.left<0:
+        player_direction.x*=-1 
+    if player_rect.top<0 or player_rect.bottom>Window_Height:
+        player_direction.y*=-1    
     pygame.display.update()
 pygame.quit()            
 
