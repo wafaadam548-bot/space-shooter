@@ -19,6 +19,9 @@ player=pygame.image.load("images/player.png").convert_alpha()#convert alpha like
 player_rect=player.get_frect(center=(Window_Width/2,350))
 lasre=pygame.image.load("images/laser.png")
 laser_rect=lasre.get_frect(bottomleft=(20,Window_Height-20))
+player_direction=-1
+plan_rect=pygame.FRect()
+clock=pygame.time.Clock()
 while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
@@ -30,9 +33,9 @@ while running:
     disPlay_surfec.blit(lasre,laser_rect)
     disPlay_surfec.blit(player,player_rect)  
     
-    player_rect.x+=0.3
-    if player_rect.x>=Window_Width:
-        player_rect.x=0 
+    player_rect.x+=player_direction*0.4
+    if player_rect.right>=Window_Width or player_rect.left<0:
+        player_direction*=-1 
     pygame.display.update()
 pygame.quit()            
 
