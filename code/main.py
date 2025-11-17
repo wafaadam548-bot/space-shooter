@@ -22,7 +22,7 @@ laser_rect=lasre.get_frect(bottomleft=(20,Window_Height-20))
 player_direction=pygame.math.Vector2()
 plan_rect=pygame.FRect()
 clock=pygame.time.Clock()
-player_speed=10
+player_speed=20
 while running:
     dt=clock.tick()/100
     for event in pygame.event.get():
@@ -30,7 +30,7 @@ while running:
             running=False
         keys=pygame.key.get_pressed()
         player_direction.x=int(keys[pygame.K_RIGHT])-int(keys[pygame.K_LEFT])
-        player_direction.x=int(keys[pygame.K_DOWN])-int(keys[pygame.K_UP])
+        player_direction.y=int(keys[pygame.K_DOWN])-int(keys[pygame.K_UP])
 
         if player_direction.x>=Window_Width:
             x=0
