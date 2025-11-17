@@ -14,6 +14,9 @@ pygame.display.set_caption("Space Shooter")
 star = pygame.image.load("images/star.png").convert_alpha()
 player_img = pygame.image.load("images/player.png").convert_alpha()
 meteor_img = pygame.image.load("images/meteor.png").convert_alpha()
+size = random.randint(30, 80)
+meteor_img = pygame.transform.scale(pygame.image.load("images/meteor.png").convert_alpha(), (size, size))
+
 laser_img = pygame.image.load("images/laser.png").convert_alpha()
 
 player_rect = player_img.get_rect(center=(w//2, 500))
