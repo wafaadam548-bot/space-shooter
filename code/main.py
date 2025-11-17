@@ -27,7 +27,7 @@ lasre = pygame.image.load("images/laser.png")
 
 player_direction = pygame.math.Vector2()
 clock = pygame.Clock()
-player_speed = 200
+player_speed =300
 laser_rect = None
 
 
