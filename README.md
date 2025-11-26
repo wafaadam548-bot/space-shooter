@@ -6,7 +6,7 @@ Your mission is to move your spaceship, shoot meteors, avoid collisions, and get
 
 ---
 
-## 🎮 Features
+## Features
 
 - Player movement in all directions  
 - Shooting lasers  
@@ -18,15 +18,15 @@ Your mission is to move your spaceship, shoot meteors, avoid collisions, and get
 
 ---
 
-## ▶️ How to Play
+## How to Play
 
-- **Arrow Keys** → Move the player  
-- **Space** → Shoot  
+- Arrow Keys → Move the player  
+- Space → Shoot  
 - Avoid meteors and try to get the highest score!  
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.8+
 - Pygame

@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: space-shooter
+Version: 0.1.0
+Summary: My beautiful game made with Pygame
+Home-page: https://github.com/wafaadam548-bot/space-shooter
+Author: Wafa Adam
+Author-email: wafaadam548@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Space Shooter
+
+Space Shooter is a simple 2D arcade game made with **Python** and **Pygame**.
+
+Your mission is to move your spaceship, shoot meteors, avoid collisions, and get the highest score possible.
+
+---
+
+## Features
+
+- Player movement in all directions  
+- Shooting lasers  
+- Random meteor spawning  
+- Score system  
+- Background stars  
+- Game reset on collision  
+- Background music and sound effects  
+
+---
+
+## How to Play
+
+- Arrow Keys â†’ Move the player  
+- Space â†’ Shoot  
+- Avoid meteors and try to get the highest score!  
+
+---
+
+## Requirements
+
+- Python 3.8+
+- Pygame
+
+Install pygame:
+
+```bash
+pip install pygame

@@ -1,0 +1,2 @@
+[console_scripts]
+space-shooter = SPACE_SHOOTER.main:main
